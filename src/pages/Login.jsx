@@ -18,7 +18,7 @@ const Login = () => {
     //send request to server
     try {
       //success scope
-      const res = await axios.post('http://localhost:8080/login', reqbody);
+      const res = await axios.post(`${import.meta.env.VITE_BASE_API_URL}/login`, reqbody);
       console.log(res);
       alert("Login Successful!");
       //store jwt token into cookie

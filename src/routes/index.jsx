@@ -39,7 +39,7 @@ const ProtectedRoutes = () => {
   const checkToken = async () => {
     try {
       // IMPORTANT INSERTION TOKEN INTO HEADER
-      const res = await axios.get("http://localhost:8080/protected", config);
+      const res = await axios.get(`${import.meta.env.VITE_BASE_API_URL}/protected`, config);
       setUserId(res.data.data.user);
     } catch (error) {
       console.error(error);

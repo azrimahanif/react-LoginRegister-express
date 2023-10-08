@@ -17,7 +17,7 @@ const Register = () => {
     //send request to server
     try {
       //success scope
-      const res = await axios.post('http://localhost:8080/register', reqbody);
+      const res = await axios.post(`${import.meta.env.VITE_BASE_API_URL}/register`, reqbody);
       console.log(res);
       alert("Registration Successful!");
 
